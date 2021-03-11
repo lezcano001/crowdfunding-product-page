@@ -103,26 +103,34 @@ input:checked + .radioControl::before {
 
 /* Aqui termina la configuración de nuestro radio button */
 
-.container > div > label > article{
+.container > div > label > article {
+    margin-bottom: 1.625rem;
+    
+    /* border-radius: 10px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 1px;
+ */
+    cursor: pointer;
+}
+
+.container > div > label > article.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.container > div > label > article > div{
     /* 34rem, 4.875rem*/
     display: grid;
     grid-template-columns: 1fr 10fr;
 
     width: 38.875rem;
     padding: 2.625rem 2rem;
-    margin-bottom: 1.625rem;
 
     border-radius: 10px; /*0.625rem*/ 
     border-color: #DADADA;
     border-style: solid;
     border-width: 1px;
-
-    cursor: pointer;
-}
-
-.container > div > label > article .disabled {
-    opacity: 0.55;
-    cursor: not-allowed;
 }
 
 .container > div > label > article > footer {
@@ -175,14 +183,14 @@ input:checked + .radioControl::before {
     border-radius: 40px;
 }
 
-.container > div > label > article > div > strong {
+.container > div > label > article > div > div > strong {
     color: #000;
     font-size: 1rem;
     font-weight: 700;
 
 }
 
-.container > div > label > article > div > p {
+.container > div > label > article > div > div > p {
     font-size: 0.9375rem;
     line-height: 1.875rem;
     color: hsl(0, 0%, 48%);
@@ -191,32 +199,32 @@ input:checked + .radioControl::before {
     margin-top: 1rem;
 }
 
-.container > div > label > article > div > div {
+.container > div > label > article > div > div > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container > div > label > article > div > div > p {
+.container > div > label > article > div > div > div > p {
     font-size: 1rem;
     font-weight: 500;
     color: hsl(0, 0%, 48%);
 }
 
-.container > div > label > article > div > div > p > span {
+.container > div > label > article > div > div > div > p > span {
     color: #000;
     margin-right: 0.6875rem;
     font-size: 1.125rem;
     font-weight: 700;
 }
 
-.container > div > label > article > div > div > div > strong {
+.container > div > label > article  > div > div > div > div > strong {
     color: #000;
     font-size: 1rem;
     font-weight: 700;
 }
 
-.container > div > label > article > div > div > div > span{
+.container > div > label > article > div > div > div > div > span{
     margin-left: 1.125rem;
 
     color: hsl(176, 50%, 47%);
