@@ -1,0 +1,127 @@
+.sectionAbout {
+    padding: 3.25rem 2.9375rem 3rem;
+    margin-bottom: 7.625rem;
+
+
+    width: 45rem;
+
+    border-radius: /*0.625rem*/ 10px;
+    border-color: #F5F5F5;
+    border-style: solid;
+    border-width: 0.125rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.sectionAbout > div {
+    width: 100%;
+    /* display: flex; */
+    
+}
+
+.sectionAbout > div h2 {
+    font-size: 1.25rem;
+    color: hsl(0, 0%, 0%);
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.sectionAbout > div > p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2.125rem;
+    color: hsl(0, 0%, 48%);
+
+    margin-bottom: 2.8125rem;
+}
+
+.sectionAbout > div > article {
+    width: 38.875rem;
+    padding: 2.625rem 2rem;
+    /*height: 15.5rem;*/ /* Este debe ser adaptable */
+    margin-bottom: 1.625rem;
+
+    border-radius: /*0.625rem*/ 10px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.sectionAbout > div > article:last-child {
+    margin-bottom: 0;
+}
+
+.sectionAbout > div > article > header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 2.375rem;
+}
+
+.sectionAbout > div > article > header > strong {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+}
+
+.sectionAbout > div > article > header > p {
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.sectionAbout > div > article > p {
+    font-size: 0.9375rem;
+    line-height: 1.875rem;
+    color: hsl(0, 0%, 48%);
+    margin-bottom: 2.0625rem;
+}
+
+.sectionAbout > div > article > footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionAbout > div > article > footer > button {
+    background-color: /*#3CB4AB*/hsl(176, 50%, 47%);
+    width: 12.75rem;
+    height: 3rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 40px;
+
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 700;
+}
+
+.sectionAbout > div > article > footer > p {
+    font-size: 0.9375rem;
+    color: hsl(0, 0%, 48%);
+    /* margin-bottom: 2.0625rem; */
+}
+
+.sectionAbout > div > article > footer > p > span {
+    color: hsl(0, 0%, 0%);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-right: 0.75rem;
+}
+
+.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.disabled button {
+    cursor: not-allowed;
+}

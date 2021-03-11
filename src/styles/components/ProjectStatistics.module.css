@@ -1,0 +1,65 @@
+.projectStatisticsContainer {
+    height: 13.3125rem;
+    display: flex;
+    margin-bottom: 1.375rem;
+
+    width: 45rem;
+
+    border-radius: /*0.625rem*/ 10px;
+    border-color: #F5F5F5;
+    border-style: solid;
+    border-width: 0.125rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.projectStatisticsContainer > div > div:first-child {
+    margin-bottom: 2.5rem;
+}
+
+.projectStatisticsContainer > div > div > div{
+    width: 39.625rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1.27fr 1.27fr;
+
+    /* align-items: center;
+    justify-content: space-between; */
+}
+
+.projectStatisticsContainer > div > div > div > p {
+    color: hsl(0, 0%, 48%);
+    border-right: 1px solid hsl(176, 50%, 47%);
+    margin-left: 3rem;
+}
+
+.projectStatisticsContainer > div > div > div > p:first-child {
+    margin: 0;
+}
+
+.projectStatisticsContainer > div > div > div > p:last-child {
+    border: none;
+}
+
+.projectStatisticsContainer > div > div > div > p > span{
+    color: hsl(0, 0%, 0%);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.projectStatisticsContainer > div .progressBar {
+    background-color: #f4f4f4;
+    width: 39.625rem;
+    height: 0.75rem;
+    border-radius: 10px;
+}
+
+.projectStatisticsContainer > div .progressBar > div {
+    background: hsl(176, 50%, 47%);
+    height: 0.75rem;
+    border-radius: 10px;
+}

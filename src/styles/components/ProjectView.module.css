@@ -1,0 +1,82 @@
+.proyectViewContainer {
+    height: 16.8rem;
+    margin-top: -5.75rem;
+    margin-bottom: 1.5rem;
+
+    width: 45rem;
+
+    border-radius: /*0.625rem*/ 10px;
+    border-color: #F5F5F5;
+    border-style: solid;
+    border-width: 0.125rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+}
+
+.proyectViewContainer > img {
+    height: 3.5rem;
+    /* justify-self: flex-start; */
+    margin-top: -3.75rem;
+    margin-bottom: 2.25rem;
+}
+
+.proyectViewContainer h1 {
+    color: hsl(0, 0%, 0%);
+    font-size: 1.75rem;
+    margin-bottom: 1.56rem;
+}
+
+.proyectViewContainer p {
+    color: hsl(0, 0%, 48%);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2.625rem;
+}
+
+.proyectViewContainer > div {
+    width: 39.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proyectViewContainer > div button {
+    display: flex;
+    align-items: center;
+
+    height: 3.5rem;
+
+    border: none;
+    border-radius: 40px;
+}
+
+.proyectViewContainer > div button{
+    justify-content: center;
+    width: 12.75rem;
+    background-color: /*#3CB4AB*/hsl(176, 50%, 47%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.proyectViewContainer > div button:nth-child(2){
+    justify-content: flex-start;
+    width: 10.875rem;
+    background-color: #f4f4f4;
+    color: hsl(176, 72%, 28%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.proyectViewContainer > div button:nth-child(2) > img {
+    height: 3.5rem;
+}
+
+.proyectViewContainer > div button:nth-child(2) span {
+    margin-left: 1rem;
+}
