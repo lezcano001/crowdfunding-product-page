@@ -1,0 +1,198 @@
+label.optionContainer > article {
+    margin-bottom: 1.625rem;
+    
+    /* border-radius: 10px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 1px;
+ */
+    cursor: pointer;
+}
+
+label.optionContainer > article.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+label.optionContainer > article > div {
+    /* 34rem, 4.875rem*/
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+
+    width: 38.875rem;
+    padding: 2.625rem 2rem;
+
+    border-radius: 7px; /*0.625rem*/ 
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 1px;
+}
+
+label.optionContainer > article.articleContainer > footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0rem;
+    padding-left: 1.6875rem;
+    padding-right: 1.6875rem;
+    /*margin-top: 0!important; /* Esta es una mala practica */
+    border-top: #EBEBEB solid 2px;
+}
+
+label.optionContainer > article > footer > p {
+    font-size: 0.9375rem;
+    color: hsl(0, 0%, 48%);
+}
+
+label.optionContainer > article > footer > form {
+    display: flex;
+}
+
+label.optionContainer > article > footer > form > div.inputWrapper {
+    position: relative;
+
+    height: 3.0625rem;
+    width: 6.25rem;
+/* 
+    margin: 0!important;
+    padding: 0!important; */
+}
+
+label.optionContainer > article > footer > form > div.inputWrapper span {
+    position: absolute;
+    top:50%; 
+    left: 1.5rem;
+    transform: translateY(-55%); /* Lo recomendable es que sea del 50% */
+
+    color: #BBBBBB;
+    font-weight: 600;
+}
+
+label.optionContainer > article > footer > form > .inputWrapper > input {
+
+    height: 3.0625rem;
+    width: 6.25rem;
+
+    padding-left: 2.5625rem;
+
+    font-weight: 700;
+    font-size: 0.875rem;
+
+    border: 0;
+    border: #DFDFDF solid 2px;
+    border-radius: 40px;
+}
+
+label.optionContainer > article > footer > form > button {
+    background-color: hsl(176, 50%, 47%);
+
+    width: 6.8125rem;
+    height: 3.0625rem;
+
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #fff;
+
+    margin-left: 1rem;
+
+    border: 0;
+    border-radius: 40px;
+}
+
+label.optionContainer > article > div > div > strong {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+label.optionContainer > article > div > div > p {
+    font-size: 0.9375rem;
+    line-height: 1.875rem;
+    color: hsl(0, 0%, 48%);
+    /* margin-bottom: 2.0625rem; */
+    /* margin-top: 1.625rem; */
+    margin-top: 1rem;
+}
+
+label.optionContainer > article > div > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label.optionContainer > article > div > div > div > p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 48%);
+}
+
+label.optionContainer > article > div > div > div > p > span {
+    color: #000;
+    margin-right: 0.6875rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+label.optionContainer > article  > div > div > div > div > strong {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* SUBTITLE STYLING */
+label.optionContainer > article > div > div > div > div > span{
+    margin-left: 1.125rem;
+
+    color: hsl(176, 50%, 47%);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.radioInput {
+    display: flex;
+}
+
+.radioInput > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input + .radioControl::before {
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    box-shadow: inset 0.75rem 0.75rem hsl(176, 50%, 47%);
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);   
+}
+
+input:checked + .radioControl::before {
+    transform: scale(1);
+}
+
+
+.radioControl {
+    display: grid;
+    place-items: center; /* The CSS place-items shorthand property sets both the align-items and justify-items properties. The first value is the align-items property value, the second the justify-items one. If the second value is not present, the first value is also used for it. */
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.1rem solid #DDDDDD;
+}
+
+label.optionSelected > article {
+    border-radius: 7px;
+    border-color: #6F9C99;
+    border-style: solid;
+    border-width: 2px;
+}
+
+label.optionSelected > article > div.articleContent {
+    border: none;
+}
