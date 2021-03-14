@@ -19,6 +19,12 @@ interface BackProjectContextData {
     setOptionSelected: (optionSelected: string) => void;
     pledgeOptionsData: Array<PledgeObjectData>; /* Este hay que modificar para crear objetos mas especificos */
     setPledgeOptionsData: ([]) => void;
+    isThanksModalOpen: boolean;
+    setIsThanksModalOpen: (isThanksModalOpen: boolean) => void;
+    moneyRaised: number;
+    setMoneyRaised: (moneyRaised: number) => void;
+    totalBackers: number;
+    setTotalBackers: (totalBackers: number) => void;
 }
 
 interface BackProjectProviderProps {
@@ -30,8 +36,11 @@ export const BackProjectContext = createContext({} as BackProjectContextData);
 
 export function BackProjectProvider({ children }: BackProjectProviderProps) {
 
+    const [totalBackers, setTotalBackers] = useState(0);
+    const [moneyRaised, setMoneyRaised] = useState(0);
     const [pledgeOptionsData, setPledgeOptionsData] = useState(pledgeOptions);
     const [isBackProjectModelOpen, setIsBackProjectModelOpen] = useState(false);
+    const [isThanksModalOpen, setIsThanksModalOpen] = useState(false);
     const [optionSelected, setOptionSelected] = useState("");
 
     return (
@@ -42,7 +51,13 @@ export function BackProjectProvider({ children }: BackProjectProviderProps) {
                 optionSelected,
                 setOptionSelected,
                 pledgeOptionsData,
-                setPledgeOptionsData
+                setPledgeOptionsData,
+                isThanksModalOpen,
+                setIsThanksModalOpen,
+                moneyRaised,
+                setMoneyRaised,
+                totalBackers,
+                setTotalBackers
             }}
         >
             {children}

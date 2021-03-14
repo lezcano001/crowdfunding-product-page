@@ -10,7 +10,16 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
 
     const { index } = rest;
 
-    const { setOptionSelected, optionSelected, pledgeOptionsData } = useContext(BackProjectContext);
+    const { setOptionSelected,
+        optionSelected,
+        pledgeOptionsData,
+        setIsThanksModalOpen,
+        setIsBackProjectModelOpen,
+        setMoneyRaised,
+        moneyRaised,
+        totalBackers,
+        setTotalBackers
+    } = useContext(BackProjectContext);
 
     /* LOS DATOS DEL ARTICULO EN EL ESTADO */
     const [pledgeData, setPledgeData] = useState(pledgeOptionsData[index]);
@@ -54,6 +63,12 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
             pledgeData2.productsLeft = String(Number(pledgeData.productsLeft) - 1);
             setPledgeData(pledgeData2);
         }
+
+        setTotalBackers(totalBackers + 1);
+        setMoneyRaised(moneyRaised + Number(pledgeValue));
+        setIsBackProjectModelOpen(false);
+        setIsThanksModalOpen(true);
+        setOptionSelected("");
 
     }
 

@@ -1,6 +1,19 @@
 import styles from '../styles/components/ProjectStatistics.module.css';
 
+import { useContext, useEffect, useState } from 'react';
+import { BackProjectContext } from '../contexts/BackProjectContext';
+
 export function ProjectStatistics() {
+
+    const { moneyRaised, totalBackers } = useContext(BackProjectContext);
+
+    const [progressBarState, setProgressBarState] = useState((moneyRaised * 100) / 100000);
+
+    useEffect(() => {
+        setProgressBarState((moneyRaised * 100) / 100000);
+
+    }, [moneyRaised]);
+
     return (
         <section className={styles.projectStatisticsContainer}>
             <div>
@@ -9,7 +22,7 @@ export function ProjectStatistics() {
 
                         <p>
                             <span>
-                                &#36;89,914
+                                &#36;{moneyRaised}
                             </span>
                             <br />
                             of $100,000 backed
@@ -17,7 +30,7 @@ export function ProjectStatistics() {
 
                         <p>
                             <span>
-                                5,007
+                                {totalBackers}
                             </span>
                             <br />
                             total backers
@@ -34,7 +47,7 @@ export function ProjectStatistics() {
                     </div>
                 </div>
                 <div className={styles.progressBar}>
-                    <div style={{ width: '89.914%' }}></div>
+                    <div style={{ width: `${progressBarState}%` }}></div>
                 </div>
 
             </div>

@@ -77,6 +77,7 @@ label.optionContainer > article > footer > form > .inputWrapper > input {
     width: 6.25rem;
 
     padding-left: 2.5625rem;
+    padding-right: 1rem;
 
     font-weight: 700;
     font-size: 0.875rem;
@@ -84,6 +85,9 @@ label.optionContainer > article > footer > form > .inputWrapper > input {
     border: 0;
     border: #DFDFDF solid 2px;
     border-radius: 40px;
+
+    /* Esta propiedad remueve el borde negro que aparece cuando seleccionamos el input */
+    /* outline: none; */
 }
 
 label.optionContainer > article > footer > form > button {

@@ -1,3 +1,10 @@
+/* Este es super importante para dejar sin barra el body cuando abrimos el modal */
+
+.containerAntiScroll {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;

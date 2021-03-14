@@ -11,7 +11,6 @@ export function BackProjectModal() {
     function exitButtonHandler() {
         setIsBackProjectModelOpen(false);
         setOptionSelected("");
-        // console.log(pledgeOptionsData);
     }
 
     const pledgeOptions = pledgeOptionsData.map(function (pledgeOption) {

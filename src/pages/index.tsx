@@ -6,30 +6,53 @@ import { ProjectView } from '../components/ProjectView';
 
 import { BackProjectModal } from '../components/BackProjectModal';
 import { BackProjectContext } from '../contexts/BackProjectContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ThanksModal } from '../components/ThanksModal';
 
 
 export default function Home() {
 
-  const { isBackProjectModelOpen } = useContext(BackProjectContext);
+  const { isBackProjectModelOpen, isThanksModalOpen } = useContext(BackProjectContext);
+
+  const [stylesOpenModal, setStylesOpenModal] = useState("");
+
+  useEffect(() => {
+
+    if (isBackProjectModelOpen !== false || isThanksModalOpen !== false) {
+      setStylesOpenModal(styles.containerAntiScroll);
+    } else {
+      setStylesOpenModal("");
+    }
+
+  }, [isBackProjectModelOpen, isThanksModalOpen])
 
   return (
-    <div className={styles.container}>
-      <Header />
-      <main>
 
-        <ProjectView />
+    /* Este es super importante para dejar sin barra el body cuando abrimos el modal */
 
-        <ProjectStatistics />
+    <div className={stylesOpenModal}>
+      <div className={styles.container}>
+        <Header />
+        <main>
 
-        <ProjectAbout />
+          <ProjectView />
 
-        {isBackProjectModelOpen && <>
-          <BackProjectModal />
-        </>
-        }
+          <ProjectStatistics />
 
-      </main>
+          <ProjectAbout />
+
+          {isBackProjectModelOpen && <>
+            <BackProjectModal />
+          </>
+          }
+
+          {isThanksModalOpen && <>
+            <ThanksModal />
+          </>
+          }
+
+        </main>
+      </div>
     </div>
   )
 }
