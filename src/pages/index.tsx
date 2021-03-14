@@ -9,6 +9,8 @@ import { BackProjectContext } from '../contexts/BackProjectContext';
 import { useContext, useEffect, useState } from 'react';
 import { ThanksModal } from '../components/ThanksModal';
 
+import Head from 'next/head';
+
 
 export default function Home() {
 
@@ -31,6 +33,9 @@ export default function Home() {
     /* Este es super importante para dejar sin barra el body cuando abrimos el modal */
 
     <div className={stylesOpenModal}>
+      <Head>
+        <title>Crowdfunding Product Page | Elias Lezcano</title>
+      </Head>
       <div className={styles.container}>
         <Header />
         <main>
