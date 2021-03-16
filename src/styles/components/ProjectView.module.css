@@ -19,8 +19,9 @@
 }
 
 .proyectViewContainer > img {
+    width: 3.5rem;
     height: 3.5rem;
-    /* justify-self: flex-start; */
+
     margin-top: -3.75rem;
     margin-bottom: 2.25rem;
 }
@@ -74,6 +75,7 @@
 }
 
 .proyectViewContainer > div button:nth-child(2) > img {
+    width: 3.5rem;
     height: 3.5rem;
 }
 

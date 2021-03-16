@@ -34,7 +34,30 @@ export default function Home() {
 
     <div className={stylesOpenModal}>
       <Head>
-        <title>Crowdfunding Product Page | Elias Lezcano</title>
+
+        {/* Primary Meta Tags */}
+        <title>Mastercraft Bamboo Monitor Riser</title>
+        <meta name="title" content="Mastercraft Bamboo Monitor Riser" />
+        <meta name="description" content="A beautiful & handcrafted monitor stand to reduce neck and eye strain." />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://crowdfunding-product-page-nine.vercel.app/" />
+        <meta property="og:title" content="Mastercraft Bamboo Monitor Riser" />
+        <meta property="og:description" content="A beautiful & handcrafted monitor stand to reduce neck and eye strain." />
+
+        {/* La imagen no funciona ahora mañana hay que arreglar */}
+        <meta property="og:image" content="/logo.mastercraft.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://crowdfunding-product-page-nine.vercel.app/" />
+        <meta property="twitter:title" content="Mastercraft Bamboo Monitor Riser" />
+        <meta property="twitter:description" content="A beautiful & handcrafted monitor stand to reduce neck and eye strain." />
+
+        {/* La imagen no funciona ahora mañana hay que arreglar */}
+        <meta property="twitter:image" content="/logo.mastercraft.png"></meta>
+
       </Head>
       <div className={styles.container}>
         <Header />
