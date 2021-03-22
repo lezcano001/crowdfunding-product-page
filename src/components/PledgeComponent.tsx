@@ -83,8 +83,6 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
 
     function enterPledge(event) {
         event.preventDefault();
-        // alert(Number(pledgeValue) / 1);
-        // setOptionSelected("");
 
         let inputValueString = pledgeValue;
 

@@ -32,9 +32,6 @@ export default function Home() {
 
   }, [isBackProjectModelOpen, isThanksModalOpen, isMenuComponentActive])
 
-  /*
-    Para usar la variable document o window en NextJS para el SSR debemos usar el hook useEffect, ya que el hook useEffect se ejecuta del lado del browser y no del lado del servidor por lo tanto puede ver las variables document y window, así como otras que podemos necesitar usar.
-  */
   useEffect(() => {
     window.addEventListener("resize", function () {
       if (window.innerWidth > 700) {
@@ -44,8 +41,6 @@ export default function Home() {
   });
 
   return (
-
-    /* Este es super importante para dejar sin barra el body cuando abrimos el modal */
 
     <div className={stylesOpenModal}>
       <Head>

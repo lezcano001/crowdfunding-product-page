@@ -25,14 +25,9 @@ export function ProjectStatistics() {
                 console.log(i)
             }
 
-            // setMoneyRaisedState("Supero 3");
-
-
         } else {
             setMoneyRaisedState(String(moneyRaised));
         }
-
-
 
     }, [moneyRaised]);
 

@@ -5,11 +5,6 @@ import styles from '../styles/components/Header.module.css';
 export function Header() {
     const { isMenuComponentActive, setIsMenuComponentActive } = useContext(MenuProjectContext);
 
-    // const mediaQuery = window.matchMedia('(max-width: 700px)');
-
-
-
-
     function hamburgerMenuHandler() {
         if (isMenuComponentActive === false) {
             setIsMenuComponentActive(true);

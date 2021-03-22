@@ -1,6 +1,4 @@
 import { useState, useEffect, createContext, ReactNode } from 'react';
-
-// import { BackProjectModal } from '../components/BackProjectModal';
 import pledgeOptions from '../../pledgeOptions.json';
 
 interface PledgeObjectData {
