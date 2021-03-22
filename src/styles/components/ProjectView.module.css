@@ -1,9 +1,11 @@
 .proyectViewContainer {
-    height: 16.8rem;
+    /* height: 16.8rem; */
+    padding: 3.25rem 2.9375rem 3rem;
     margin-top: -5.75rem;
     margin-bottom: 1.5rem;
 
-    width: 45rem;
+    /* width: 45rem; */
+    width: 100%;
 
     border-radius: /*0.625rem*/ 10px;
     border-color: #F5F5F5;
@@ -22,14 +24,19 @@
     width: 3.5rem;
     height: 3.5rem;
 
-    margin-top: -3.75rem;
-    margin-bottom: 2.25rem;
+    /* margin-top: -3.75rem; */
+    margin-top: -3.25rem;
+    /* margin-bottom: 2.25rem; */
+
+    transform: translateY(-50%);
 }
 
-.proyectViewContainer h1 {
+.proyectViewContainer > h1 {
     color: hsl(0, 0%, 0%);
     font-size: 1.75rem;
     margin-bottom: 1.56rem;
+
+    text-align: center;
 }
 
 .proyectViewContainer p {
@@ -37,32 +44,34 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 2.625rem;
+
+    text-align: center;
 }
 
 .proyectViewContainer > div {
-    width: 39.625rem;
+    width: 100%;
+    max-width: 39.625rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.proyectViewContainer > div button {
-    display: flex;
-    align-items: center;
-
-    height: 3.5rem;
-
-    border: none;
-    border-radius: 40px;
-}
-
 .proyectViewContainer > div button{
-    justify-content: center;
-    width: 12.75rem;
     background-color: /*#3CB4AB*/hsl(176, 50%, 47%);
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
+
+    width: 12.75rem;
+    height: 3.5rem;
+
+    border: none;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .proyectViewContainer > div button:nth-child(2){
@@ -82,3 +91,49 @@
 .proyectViewContainer > div button:nth-child(2) span {
     margin-left: 1rem;
 }
+
+/* 570px */
+
+/* 540px */
+
+/* 535px */
+
+@media(max-width: 535px) {
+
+    .proyectViewContainer > div button {
+        width: 80%;
+        max-width: 20rem;
+    }
+
+    .proyectViewContainer > div button:nth-child(2){
+        width: auto;
+    }
+
+    .proyectViewContainer > div button:nth-child(2) span {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) { 
+    .proyectViewContainer {
+        padding: 3.25rem 1.5rem 3rem;
+    }
+    .proyectViewContainer > div button {
+        width: 70%;
+    }
+}
+
+/* 
+@media(max-width: 540px) {
+
+    .proyectViewContainer > div {
+        flex-direction: column;
+    }
+
+    .proyectViewContainer > div > button {
+        margin-bottom: 2rem;
+    }
+
+} */
+
+/* 420px */

@@ -12,4 +12,19 @@
 
 .container main {
     margin: 0 auto;
+    width: 70%;
+    max-width: 45rem;
+}
+
+
+@media(/*max-width: 768px*/ max-width: 850px) {
+    .container main {
+        width: 80%;
+    }
+}
+
+@media(/*max-width: 768px*/ max-width: 400px) {
+    .container main {
+        width: 85%;
+    }
 }

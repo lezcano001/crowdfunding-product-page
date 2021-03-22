@@ -1,11 +1,5 @@
 label.optionContainer > article {
     margin-bottom: 1.625rem;
-    
-    /* border-radius: 10px;
-    border-color: #DADADA;
-    border-style: solid;
-    border-width: 1px;
- */
     cursor: pointer;
 }
 
@@ -14,15 +8,23 @@ label.optionContainer > article.disabled {
     cursor: not-allowed;
 }
 
+/* Article Content Styling */
 label.optionContainer > article > div {
-    /* 34rem, 4.875rem*/
-    display: grid;
-    grid-template-columns: 1fr 10fr;
 
-    width: 38.875rem;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+        "radioButton header productsLeft"
+        ". description description";
+
+    width: 100%;
+    max-width: 38.875rem;
+
     padding: 2.625rem 2rem;
 
-    border-radius: 7px; /*0.625rem*/ 
+    border-radius: 7px;
     border-color: #DADADA;
     border-style: solid;
     border-width: 1px;
@@ -38,7 +40,6 @@ label.optionContainer > article.articleContainer > footer {
     margin-top: 0rem;
     padding-left: 1.6875rem;
     padding-right: 1.6875rem;
-    /*margin-top: 0!important; /* Esta es una mala practica */
     border-top: #EBEBEB solid 2px;
 }
 
@@ -49,6 +50,7 @@ label.optionContainer > article > footer > p {
 
 label.optionContainer > article > footer > form {
     display: flex;
+    align-items: center;
 }
 
 label.optionContainer > article > footer > form > div.inputWrapper {
@@ -56,9 +58,6 @@ label.optionContainer > article > footer > form > div.inputWrapper {
 
     height: 3.0625rem;
     width: 6.25rem;
-/* 
-    margin: 0!important;
-    padding: 0!important; */
 }
 
 label.optionContainer > article > footer > form > div.inputWrapper span {
@@ -106,49 +105,21 @@ label.optionContainer > article > footer > form > button {
     border-radius: 40px;
 }
 
-label.optionContainer > article > div > div > strong {
-    color: #000;
-    font-size: 1rem;
-    font-weight: 700;
-
-}
-
-label.optionContainer > article > div > div > p {
-    font-size: 0.9375rem;
-    line-height: 1.875rem;
-    color: hsl(0, 0%, 48%);
-    /* margin-bottom: 2.0625rem; */
-    /* margin-top: 1.625rem; */
-    margin-top: 1rem;
-}
-
-label.optionContainer > article > div > div > div {
+label.optionContainer > article > div.articleContent > div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    grid-area: header;
 }
 
-label.optionContainer > article > div > div > div > p {
-    font-size: 1rem;
-    font-weight: 500;
-    color: hsl(0, 0%, 48%);
-}
-
-label.optionContainer > article > div > div > div > p > span {
-    color: #000;
-    margin-right: 0.6875rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-}
-
-label.optionContainer > article  > div > div > div > div > strong {
+/* TITLE STYLING */
+label.optionContainer > article > div.articleContent > div > strong {
     color: #000;
     font-size: 1rem;
     font-weight: 700;
 }
 
 /* SUBTITLE STYLING */
-label.optionContainer > article > div > div > div > div > span{
+label.optionContainer > article > div.articleContent > div > span {
     margin-left: 1.125rem;
 
     color: hsl(176, 50%, 47%);
@@ -156,6 +127,34 @@ label.optionContainer > article > div > div > div > div > span{
     font-weight: 500;
 }
 
+/* PRODUCTS LEFT TEXT STYLING */
+label.optionContainer > article > div.articleContent > p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 48%);
+
+    grid-area: productsLeft;
+}
+
+/* PRODUCTS LEFT NUMBER STYLING */
+label.optionContainer > article > div.articleContent > p > span {
+    color: #000;
+    margin-right: 0.6875rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* DESCRIPTION STYLING */
+label.optionContainer > article > div.articleContent > p.pledgeDescription {
+    font-size: 0.9375rem;
+    line-height: 1.875rem;
+    color: hsl(0, 0%, 48%);
+    margin-top: 1rem;
+
+    grid-area: description;
+}
+
+/* ====== RADIO INPUT STYLING START ====== */
 .radioInput {
     display: flex;
 }
@@ -190,6 +189,10 @@ input:checked + .radioControl::before {
     border: 0.1rem solid #DDDDDD;
 }
 
+/* ====== RADIO INPUT STYLING END ====== */
+
+
+/* OPTION SELECTED STYLING */
 label.optionSelected > article {
     border-radius: 7px;
     border-color: #6F9C99;
@@ -199,4 +202,85 @@ label.optionSelected > article {
 
 label.optionSelected > article > div.articleContent {
     border: none;
+}
+
+
+@media(max-width: 750px) {
+    label.optionContainer > article.articleContainer > div.articleContent {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "radioButton header"
+            ". description"
+            ". footer";
+    
+        width: 100%;
+        max-width: 38.875rem;
+        padding: 2.625rem 2rem;
+    }
+
+    /* HEADER GROUP STYLING */
+    label.optionContainer > article > div.articleContent > div > div > div {
+        grid-area: header;
+    }
+
+    /* DESCRIPTION STYLING */
+    label.optionContainer > article > div.articleContent > p {
+        margin-top: 1rem;
+        grid-area: footer;
+    }
+}
+
+@media(max-width: 630px) {
+
+    label.optionContainer > article.articleContainer > div.articleContent {
+        grid-template-areas:
+            "radioButton header"
+            "description description"
+            "footer footer";
+    }
+
+    .radioInput  {
+        align-items: center;
+    }
+
+    label.optionContainer > article > div.articleContent > div {
+        margin-left: 1rem;
+        flex-direction: column;
+    }
+
+    label.optionContainer > article > div.articleContent > div > span {
+        margin: 0;
+        margin-top: 0.93rem;
+    }
+
+    label.optionSelected > article > div.articleContent {
+        border: none;
+    }
+}
+
+@media(max-width: 520px) {
+    label.optionContainer > article.articleContainer > footer {
+        padding-top: 2.45rem;
+        padding-bottom: 1.57rem;
+        flex-direction: column;
+    }
+
+    label.optionContainer > article > footer > p {
+        margin-bottom: 1.714rem;
+    }
+
+    label.optionContainer > article > footer > form > div.inputWrapper {
+        width: 7rem;
+    }
+
+    label.optionContainer > article > footer > form > div.inputWrapper > input {
+        width: 7rem;
+    }
+
+    label.optionContainer > article > footer > form > button {
+        width: 7.5625rem;
+    }
 }

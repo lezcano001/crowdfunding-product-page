@@ -28,7 +28,7 @@
     margin: 11.5rem auto;
 
     background: #fff;
-    /* width: 100%; */
+    width: 70%;
     max-width: 45rem;
     padding: 3.25rem 2.9375rem 3rem;
     
@@ -59,10 +59,10 @@
 .container > div > p {
     font-size: 1rem;
     font-weight: 400;
-    /* line-height: 2.125rem; */
+    line-height: 2.125rem;
     color: hsl(0, 0%, 48%);
 
-    margin-bottom: 2.3125rem;
+    margin-bottom: 2rem;
 }
 
 .container > div > button {
@@ -76,4 +76,31 @@
 
 .container > div > button > img {
     height: 0.875rem;
+}
+
+
+/* Terminar mas tarde */
+@media(/*max-width: 768px*/ max-width: 850px) {
+    .container {
+        margin: 8.64rem auto;
+        width: 80%;
+    }
+}
+
+@media(max-width: 580px) {
+    .container {
+        padding: 2.642rem 1.714rem 2.214rem;
+    }
+}
+
+@media(max-width: 480px) { 
+    .container {
+        width: 85%;
+    }
+}
+
+@media(/*max-width: 768px*/ max-width: 375px) {
+    .container {
+        width: 87.5%;
+    }
 }

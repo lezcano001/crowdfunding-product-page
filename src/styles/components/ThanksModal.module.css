@@ -32,7 +32,7 @@
     transform: translate(-50%, -50%);
 
     background: #fff;
-    /* width: 100%; */
+    width: 70%;
     max-width: 33.75rem;
     padding: 3.25rem 2.9375rem 3rem;
     
@@ -87,4 +87,28 @@
 
     font-weight: 700;
     color: #fff;
+}
+
+@media(/*max-width: 768px*/ max-width: 850px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width: 580px) {
+    .container {
+        padding: 2.642rem 1.714rem 2.214rem;
+    }
+}
+
+@media(max-width: 480px) { 
+    .container {
+        width: 85%;
+    }
+}
+
+@media(/*max-width: 768px*/ max-width: 375px) {
+    .container {
+        width: 87.5%;
+    }
 }

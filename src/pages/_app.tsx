@@ -1,12 +1,15 @@
 import { BackProjectProvider } from '../contexts/BackProjectContext';
+import { MenuProjectProvider } from '../contexts/MenuProjectContext';
 import '../styles/global.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <BackProjectProvider>
-        <Component {...pageProps} />
-      </BackProjectProvider>
+      <MenuProjectProvider>
+        <BackProjectProvider>
+          <Component {...pageProps} />
+        </BackProjectProvider>
+      </MenuProjectProvider>
     </>
   )
 }

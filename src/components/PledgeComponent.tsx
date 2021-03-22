@@ -50,13 +50,56 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
     }
 
     function handlePledge(event) {
-        setPledgeValue(event.target.value);
+
+        let inputValueString = event.target.value;
+
+        let inputValueArray = inputValueString.split("");
+
+        for (let i = 0; i < inputValueArray.length; i++) {
+
+            if (inputValueArray[i] === ',') {
+                inputValueArray.splice(i, 1);
+            }
+
+        }
+
+        inputValueString = inputValueArray.join("");
+
+        if (inputValueString.length > 3) {
+
+            let test = inputValueString.split('');
+
+            for (let i = inputValueString.length - 3; i > 0; i = i - 3) {
+                test.splice(i, 0, ",");
+
+                setPledgeValue(test.join(""));
+                console.log(i)
+            }
+        } else {
+            setPledgeValue(inputValueString);
+        }
+
     }
 
     function enterPledge(event) {
         event.preventDefault();
         // alert(Number(pledgeValue) / 1);
         // setOptionSelected("");
+
+        let inputValueString = pledgeValue;
+
+        let inputValueArray = inputValueString.split("");
+
+        for (let i = 0; i < inputValueArray.length; i++) {
+
+            if (inputValueArray[i] === ',') {
+                inputValueArray.splice(i, 1);
+            }
+
+        }
+
+        inputValueString = inputValueArray.join("");
+
         let pledgeData2 = pledgeData;
 
         if (pledgeData2.productsLeft !== "Nothing") {
@@ -65,7 +108,7 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
         }
 
         setTotalBackers(totalBackers + 1);
-        setMoneyRaised(moneyRaised + Number(pledgeValue));
+        setMoneyRaised(moneyRaised + Number(/*pledgeValue*/inputValueString));
         setIsBackProjectModelOpen(false);
         setIsThanksModalOpen(true);
         setOptionSelected("");
@@ -77,34 +120,38 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
         <>
             {pledgeData.productsLeft === "Nothing" || Number(pledgeData.productsLeft) > 0 ? (<>
                 <label className={stylesPledge}>
+
                     <article className={styles.articleContainer}>
+
                         <div onChange={radioButtonActive} className={styles.articleContent}>
+
                             <span className={styles.radioInput}>
                                 <input type="radio" id={pledgeData.optionValue} name="pledge" value={pledgeData.optionValue} />
                                 <span className={styles.radioControl}></span>
                             </span>
+
                             <div>
-                                <div>
-                                    <div>
-                                        <strong>{pledgeData.title}</strong>
-                                        {pledgeData.subtitle !== "" && <>
-                                            <span>Pledge &#36;{pledgeData.subtitle} or more</span>
-                                        </>
-                                        }
-                                    </div>
-                                    {pledgeData.productsLeft !== "Nothing" && <>
-                                        <p>
-                                            <span>{pledgeData.productsLeft}</span>
-                                            left
-                                        </p>
-                                    </>
-                                    }
-                                </div>
-                                <p>
-                                    {pledgeData.description}
-                                </p>
+                                <strong>{pledgeData.title}</strong>
+                                {pledgeData.subtitle !== "" && <>
+                                    <span className={styles.pledgeSubtitle}>Pledge &#36;{pledgeData.subtitle} or more</span>
+                                </>
+                                }
                             </div>
+
+                            {pledgeData.productsLeft !== "Nothing" && <>
+                                <p>
+                                    <span>{pledgeData.productsLeft}</span>
+                                    left
+                                </p>
+                            </>
+                            }
+
+                            <p className={styles.pledgeDescription}>
+                                {pledgeData.description}
+                            </p>
+
                         </div>
+
                         {optionSelected === pledgeData.optionValue && <>
                             <footer>
                                 <p>
@@ -126,40 +173,44 @@ export function PledgeComponent({ ...rest }: PledgeWithRewardOptionComponentProp
             </>
             ) : (<>
                 <label className={stylesPledge}>
-                    <article className={`${styles.optionContainer} ${styles.disabled}`}>
+
+                    <article className={`${styles.articleContainer} ${styles.disabled}`}>
+
                         <div onChange={radioButtonActive} className={styles.articleContent}>
+
                             <span className={styles.radioInput}>
                                 <input type="radio" id={pledgeData.optionValue} name="pledge" value={pledgeData.optionValue} disabled />
                                 <span className={styles.radioControl}></span>
                             </span>
+
                             <div>
-                                <div>
-                                    <div>
-                                        <strong>{pledgeData.title}</strong>
-                                        {pledgeData.subtitle !== "" && <>
-                                            <span>Pledge &#36;{pledgeData.subtitle} or more</span>
-                                        </>
-                                        }
-                                    </div>
-                                    {pledgeData.productsLeft !== "" && <>
-                                        <p>
-                                            <span>{pledgeData.productsLeft}</span>
-                                            left
-                                        </p>
-                                    </>
-                                    }
-                                </div>
-                                <p>
-                                    {pledgeData.description}
-                                </p>
+                                <strong>{pledgeData.title}</strong>
+                                {pledgeData.subtitle !== "" && <>
+                                    <span>Pledge &#36;{pledgeData.subtitle} or more</span>
+                                </>
+                                }
                             </div>
+
+                            {pledgeData.productsLeft !== "" && <>
+                                <p>
+                                    <span>{pledgeData.productsLeft}</span>
+                                    left
+                                </p>
+                            </>
+                            }
+
+                            <p className={styles.pledgeDescription}>
+                                {pledgeData.description}
+                            </p>
+
                         </div>
+
                     </article>
 
                 </label>
 
             </>
-                )
+            )
             }
         </>
     );

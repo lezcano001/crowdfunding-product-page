@@ -5,19 +5,6 @@
 }
 
 :root {
-  --white: #fff;
-  --background: #FAFAFA;
-  --gray-line: #DCDDE0;
-  --text: #666666;
-  --text-highlight: #B3B9FF;
-  --title: #2E384D;
-  --red: #E83F5B;
-  --green: #4CD62B;
-  --blue: #5965E0;
-  --blue-dark: #4953B8;
-  --blue-twitter: #2AA9E0;
-
-
   /* Styles colors of the challenge */
 
   /* Primary */
@@ -31,17 +18,27 @@
   --text-white: #fff;
 }
 
-@media(max-width: 1080px) {
+html {
+  font-size: 100%;
+}
+
+
+/* Es fundamental que los media queries se posicionen de mayor a menor para que funcionen */
+
+
+@media(max-width: 1024px) {
   html {
-      font-size: 93.75%;
+    font-size: 87.5%;
   }
 }
 
-@media(max-width: 720px) {
+
+/* ======= TABLET MEDIA QUERIES: 768 px  ======= */
+/* @media(max-width: 768px) {
   html {
-      font-size: 87.5%;
+      font-size: 75%;
   }
-}
+} */
 
 body {
   background: var(--background);

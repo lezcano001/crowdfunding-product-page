@@ -41,30 +41,37 @@ export function ProjectStatistics() {
             <div>
                 <div>
                     <div>
+                        <div>
+                            <p>
+                                <span>
+                                    &#36;{moneyRaisedState}
+                                </span>
+                                <br />
+                                of $100,000 backed
+                            </p>
+                            <div></div>
+                        </div>
 
-                        <p>
-                            <span>
-                                &#36;{moneyRaisedState}
-                            </span>
-                            <br />
-                            of $100,000 backed
-                        </p>
+                        <div>
+                            <p>
+                                <span>
+                                    {totalBackers}
+                                </span>
+                                <br />
+                                total backers
+                            </p>
+                            <div></div>
+                        </div>
 
-                        <p>
-                            <span>
-                                {totalBackers}
-                            </span>
-                            <br />
-                            total backers
-                        </p>
-
-                        <p>
-                            <span>
-                                56
-                            </span>
-                            <br />
-                            days left
-                        </p>
+                        <div>
+                            <p>
+                                <span>
+                                    56
+                                </span>
+                                <br />
+                                days left
+                            </p>
+                        </div>
 
                     </div>
                 </div>

@@ -1,9 +1,11 @@
 .projectStatisticsContainer {
-    height: 13.3125rem;
+    padding: 3.25rem 2.9375rem 3rem;
+    /* height: 13.3125rem; */
     display: flex;
     margin-bottom: 1.375rem;
 
-    width: 45rem;
+    /* width: 45rem; */
+    width: 100%;
 
     border-radius: /*0.625rem*/ 10px;
     border-color: #F5F5F5;
@@ -17,35 +19,55 @@
     background-color: #fff;
 }
 
+.projectStatisticsContainer div {
+    width: 100%;
+}
+
 .projectStatisticsContainer > div > div:first-child {
     margin-bottom: 2.5rem;
 }
 
 .projectStatisticsContainer > div > div > div{
-    width: 39.625rem;
+    width: 100%;
+    max-width: 39.625rem;
 
     display: grid;
     grid-template-columns: 1fr 1.27fr 1.27fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(13.625rem, 1fr)); */
 
     /* align-items: center;
     justify-content: space-between; */
 }
 
-.projectStatisticsContainer > div > div > div > p {
+/* .projectStatisticsContainer > div > div > div > div > p {
     color: hsl(0, 0%, 48%);
     border-right: 1px solid hsl(176, 50%, 47%);
     margin-left: 3rem;
+} */
+
+.projectStatisticsContainer > div > div > div > div {
+    color: hsl(0, 0%, 48%);
+    border-right: 1px solid hsl(176, 50%, 47%);
+    padding-left: 3rem;
 }
 
-.projectStatisticsContainer > div > div > div > p:first-child {
+/* .projectStatisticsContainer > div > div > div > div > p:first-child {
     margin: 0;
+} */
+
+.projectStatisticsContainer > div > div > div > div:first-child {
+    padding: 0;
 }
 
-.projectStatisticsContainer > div > div > div > p:last-child {
+/* .projectStatisticsContainer > div > div > div > div > p:last-child {
+    border: none;
+} */
+
+.projectStatisticsContainer > div > div > div > div:last-child {
     border: none;
 }
 
-.projectStatisticsContainer > div > div > div > p > span{
+.projectStatisticsContainer > div > div > div > div > p > span{
     color: hsl(0, 0%, 0%);
     font-size: 1.75rem;
     font-weight: 700;
@@ -53,7 +75,8 @@
 
 .projectStatisticsContainer > div .progressBar {
     background-color: #f4f4f4;
-    width: 39.625rem;
+    width: 100%;
+    max-width: 39.625rem;
     height: 0.75rem;
     border-radius: 10px;
 }
@@ -62,4 +85,56 @@
     background: hsl(176, 50%, 47%);
     height: 0.75rem;
     border-radius: 10px;
+}
+
+
+/* ======= TABLET MEDIA QUERIES  ======= */
+@media(/*max-width: 768px*/ max-width: 850px) {
+    .projectStatisticsContainer > div > div > div {
+        width: 100%;
+        max-width: 39.625rem;
+
+        /* font-size: 75%; */
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .projectStatisticsContainer > div > div > div > div {
+        padding: 0;
+        border: 0;
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+
+    .projectStatisticsContainer > div > div > div > div > p {
+        text-align: center;
+        color: hsl(0, 0%, 48%);
+        margin: 0;
+        border: 0;
+
+    }
+
+    .projectStatisticsContainer > div > div > div > div > div{
+        background-color: hsl(176, 50%, 47%);
+        min-width: 3.75rem;
+        width: 20%;
+        height: 1px;
+        border-radius: 10px;
+
+        margin: 1.5rem auto;
+
+    }   
+}
+
+
+@media(max-width: 480px) { 
+    .projectStatisticsContainer {
+        padding: 3.25rem 1.5rem 3rem;
+    }
 }

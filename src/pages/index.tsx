@@ -8,25 +8,40 @@ import { BackProjectModal } from '../components/BackProjectModal';
 import { BackProjectContext } from '../contexts/BackProjectContext';
 import { useContext, useEffect, useState } from 'react';
 import { ThanksModal } from '../components/ThanksModal';
+import { MenuComponent } from '../components/MenuComponent';
 
 import Head from 'next/head';
+import { MenuProjectContext } from '../contexts/MenuProjectContext';
 
 
 export default function Home() {
 
   const { isBackProjectModelOpen, isThanksModalOpen } = useContext(BackProjectContext);
 
+  const { isMenuComponentActive, setIsMenuComponentActive } = useContext(MenuProjectContext);
+
   const [stylesOpenModal, setStylesOpenModal] = useState("");
 
   useEffect(() => {
 
-    if (isBackProjectModelOpen !== false || isThanksModalOpen !== false) {
+    if (isBackProjectModelOpen !== false || isThanksModalOpen !== false || isMenuComponentActive !== false) {
       setStylesOpenModal(styles.containerAntiScroll);
     } else {
       setStylesOpenModal("");
     }
 
-  }, [isBackProjectModelOpen, isThanksModalOpen])
+  }, [isBackProjectModelOpen, isThanksModalOpen, isMenuComponentActive])
+
+  /*
+    Para usar la variable document o window en NextJS para el SSR debemos usar el hook useEffect, ya que el hook useEffect se ejecuta del lado del browser y no del lado del servidor por lo tanto puede ver las variables document y window, así como otras que podemos necesitar usar.
+  */
+  useEffect(() => {
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 700) {
+        setIsMenuComponentActive(false);
+      }
+    });
+  });
 
   return (
 
@@ -61,6 +76,12 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <Header />
+
+        {isMenuComponentActive && <>
+          <MenuComponent />
+        </>
+        }
+
         <main>
 
           <ProjectView />

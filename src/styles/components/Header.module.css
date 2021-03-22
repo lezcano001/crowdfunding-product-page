@@ -17,7 +17,14 @@
     justify-content: space-between;
 
     height: 5rem;
-    width: 80vw;
+    /* width: 80vw; */
+    width: 80%;
+    max-width: 68.75rem;
+}
+
+.headerContainer > div > a > img {
+    width: 8rem;
+    height: 1.25rem;
 }
 
 .headerContainer > div > div > a{
@@ -27,12 +34,34 @@
     margin-right: 1rem;
 }
 
+.headerContainer > div > div > img {
+    width: 1.25rem;
+    height: 1.17rem;
+    display: none;
+}
 
-.headerContainer > div > div > a > img {
+
+/* .headerContainer > div > div > a > img {
     width: 8rem;
     height: 1.25rem;
-}
+} */
 
 .headerContainer > div > div > a:last-child{
     margin: 0 0 0 0;
+}
+
+@media(/*max-width: 768px*/ max-width: 700px) {
+    .container main {
+        width: 80%;
+    }
+
+    .headerContainer > div > div > a {
+        display: none;
+    }
+
+    .headerContainer > div > div > img {
+        width: 1.25rem;
+        height: 1.17rem;
+        display: initial;
+    }
 }
