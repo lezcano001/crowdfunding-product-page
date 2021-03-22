@@ -10,7 +10,6 @@ label.optionContainer > article.disabled {
 
 /* Article Content Styling */
 label.optionContainer > article > div {
-
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
@@ -71,7 +70,6 @@ label.optionContainer > article > footer > form > div.inputWrapper span {
 }
 
 label.optionContainer > article > footer > form > .inputWrapper > input {
-
     height: 3.0625rem;
     width: 6.25rem;
 
@@ -85,8 +83,6 @@ label.optionContainer > article > footer > form > .inputWrapper > input {
     border: #DFDFDF solid 2px;
     border-radius: 40px;
 
-    /* Esta propiedad remueve el borde negro que aparece cuando seleccionamos el input */
-    /* outline: none; */
 }
 
 label.optionContainer > article > footer > form > button {
@@ -182,7 +178,7 @@ input:checked + .radioControl::before {
 
 .radioControl {
     display: grid;
-    place-items: center; /* The CSS place-items shorthand property sets both the align-items and justify-items properties. The first value is the align-items property value, the second the justify-items one. If the second value is not present, the first value is also used for it. */
+    place-items: center;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;

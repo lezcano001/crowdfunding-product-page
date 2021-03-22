@@ -2,11 +2,9 @@
     padding: 3.25rem 2.9375rem 3rem;
     margin-bottom: 7.625rem;
 
-
-    /* width: 45rem; */
     width: 100%;
 
-    border-radius: /*0.625rem*/ 10px;
+    border-radius: 10px;
     border-color: #F5F5F5;
     border-style: solid;
     border-width: 0.125rem;
@@ -20,8 +18,6 @@
 
 .sectionAbout > div {
     width: 100%;
-    /* display: flex; */
-    
 }
 
 .sectionAbout > div h2 {
@@ -45,10 +41,9 @@
     width: 100%;
     max-width: 38.875rem;
     padding: 2.625rem 2rem;
-    /*height: 15.5rem;*/ /* Este debe ser adaptable */
     margin-bottom: 1.625rem;
 
-    border-radius: /*0.625rem*/ 10px;
+    border-radius: 10px;
     border-color: #DADADA;
     border-style: solid;
     border-width: 1px;
@@ -91,7 +86,7 @@
 }
 
 .sectionAbout > div > article > footer > button {
-    background-color: /*#3CB4AB*/hsl(176, 50%, 47%);
+    background-color: hsl(176, 50%, 47%);
     width: 12.75rem;
     height: 3rem;
     
@@ -110,7 +105,6 @@
 .sectionAbout > div > article > footer > p {
     font-size: 0.9375rem;
     color: hsl(0, 0%, 48%);
-    /* margin-bottom: 2.0625rem; */
 }
 
 .sectionAbout > div > article > footer > p > span {
@@ -128,12 +122,6 @@
 .disabled button {
     cursor: not-allowed;
 }
-
-/* 570px for breakpoint of articles in about project  */
-/* @media(max-width: 570px) {
-
-} */
-
 
 @media(max-width: 620px) { 
     .sectionAbout > div > article > header {

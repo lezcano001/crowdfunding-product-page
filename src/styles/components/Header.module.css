@@ -17,7 +17,6 @@
     justify-content: space-between;
 
     height: 5rem;
-    /* width: 80vw; */
     width: 80%;
     max-width: 68.75rem;
 }
@@ -40,17 +39,11 @@
     display: none;
 }
 
-
-/* .headerContainer > div > div > a > img {
-    width: 8rem;
-    height: 1.25rem;
-} */
-
 .headerContainer > div > div > a:last-child{
     margin: 0 0 0 0;
 }
 
-@media(/*max-width: 768px*/ max-width: 700px) {
+@media(max-width: 700px) {
     .container main {
         width: 80%;
     }

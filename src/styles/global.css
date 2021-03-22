@@ -22,10 +22,6 @@ html {
   font-size: 100%;
 }
 
-
-/* Es fundamental que los media queries se posicionen de mayor a menor para que funcionen */
-
-
 @media(max-width: 1024px) {
   html {
     font-size: 87.5%;
@@ -37,14 +33,6 @@ html {
     font-size: 75%;
   }
 }
-
-
-/* ======= TABLET MEDIA QUERIES: 768 px  ======= */
-/* @media(max-width: 768px) {
-  html {
-      font-size: 75%;
-  }
-} */
 
 body {
   background: var(--background);
@@ -60,6 +48,6 @@ button {
 }
 
 a {
-  color: inherit; /* Con el valor inherit básicamente heredados el valor de la misma propiedad del elemento padre*/
+  color: inherit;
   text-decoration: none;
 }

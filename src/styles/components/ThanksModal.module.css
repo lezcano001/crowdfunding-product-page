@@ -17,12 +17,6 @@
     width: 100%;
 
     overflow-y: auto;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
 }
 
 .container {
@@ -89,7 +83,7 @@
     color: #fff;
 }
 
-@media(/*max-width: 768px*/ max-width: 850px) {
+@media(max-width: 850px) {
     .container {
         width: 80%;
     }
@@ -107,7 +101,7 @@
     }
 }
 
-@media(/*max-width: 768px*/ max-width: 375px) {
+@media(max-width: 375px) {
     .container {
         width: 87.5%;
     }

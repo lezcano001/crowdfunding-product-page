@@ -1,8 +1,4 @@
 .overlay {
-    /* box-sizing: content-box; */
-
-    /* padding-top: 11.5rem;
-    padding-bottom: 11.5rem; */
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -78,9 +74,7 @@
     height: 0.875rem;
 }
 
-
-/* Terminar mas tarde */
-@media(/*max-width: 768px*/ max-width: 850px) {
+@media(max-width: 850px) {
     .container {
         margin: 8.64rem auto;
         width: 80%;
@@ -99,7 +93,7 @@
     }
 }
 
-@media(/*max-width: 768px*/ max-width: 375px) {
+@media(max-width: 375px) {
     .container {
         width: 87.5%;
     }

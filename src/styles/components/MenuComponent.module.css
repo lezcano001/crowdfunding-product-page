@@ -39,21 +39,6 @@
     list-style-type: none;
 }
 
-/* .overlay > div > nav.container > ul > li {
-    padding: 2rem 0 2rem 1.714rem;
-    border-top: #ECECEC solid 1px;
-
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.overlay > div > nav.container > ul > li:first-child {
-    border: 0;
-} */
-
-
-/* INICIO DE LA VERSION 2 */
-
 .overlay > div > nav.container > ul > a {
     padding: 2rem 0 2rem 1.714rem;
     border-top: #ECECEC solid 1px;
@@ -65,9 +50,6 @@
 .overlay > div > nav.container > ul > a:first-child {
     border: 0;
 }
-
-/* FIN DE LA VERSION 2 */
-
 
 .overlay > div > nav.container > button {
     position: absolute;
