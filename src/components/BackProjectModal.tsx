@@ -17,6 +17,7 @@ export function BackProjectModal() {
         return (
             <PledgeComponent
                 index={pledgeOption.id}
+                key={pledgeOption.id}
             />
 
         )

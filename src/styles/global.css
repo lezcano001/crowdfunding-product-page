@@ -32,6 +32,12 @@ html {
   }
 }
 
+@media(max-width: 320px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 
 /* ======= TABLET MEDIA QUERIES: 768 px  ======= */
 /* @media(max-width: 768px) {
